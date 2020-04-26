@@ -82,9 +82,6 @@ body {
     width: 20px;
     margin-top: 5px;
     margin-right: 25px; }
-  .header__nav:after {
-    content: '';
-    background-image: url("../../img/search-solid.svg"); }
 
 .header__burger {
   display: none !important; }

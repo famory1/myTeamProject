@@ -32,10 +32,7 @@ body{
 			margin-top: 5px;
 			margin-right: 25px;
 		}
-		&:after{
-			content: '';
-			background-image: url('../../img/search-solid.svg');
-		}
+		
 	}
 	&__burger{
 		display: none !important;
@@ -156,7 +153,7 @@ body{
 			display: inline-flex;		
 		}
 		&__text{
-
+			
 		}
 		&__btn{
 			align-self: flex-end;

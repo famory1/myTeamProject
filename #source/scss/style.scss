@@ -67,6 +67,7 @@ body{
 			color: #777777;
 		}
 	}
+
 	&__text {
 		background: none;
 		float: left;
@@ -80,6 +81,9 @@ body{
 		transition-delay: 0.1s;
 		&::placeholder{
 			color: #fff;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 700;
 		}
 	}
 	&__btn {
@@ -103,11 +107,11 @@ body{
 			display: block !important;
 			z-index: 10;
 			margin-right: 15px;
-			color: #000;
+			color: #777777;
 			font-size: 24px;
 			position: relative;
 			left: 0%;
-			margin-top: 20px;
+			margin-top: 1.5px;
 			transition-delay: 0.2s;
 			transition-duration: 0.5s;
 		}
@@ -153,7 +157,7 @@ body{
 			display: inline-flex;		
 		}
 		&__text{
-			
+			align-self: flex-end;
 		}
 		&__btn{
 			align-self: flex-end;

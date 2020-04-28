@@ -1,0 +1,59 @@
+// Второй блок============================================================================================= //
+.slider {
+	&__item {
+		position: relative;
+	}
+	&__img {
+	}
+	&__text {
+	}
+	&__title {
+	}
+	&__subtitle {
+	}
+}
+// Сам слайдер и его панель управления
+.slider{
+	min-width: 0;
+}
+
+}
+.slick-track{
+	display: flex;
+}
+.stick-list{
+	overflow: hidden;
+}
+.slick-arrow{
+	position: absolute;
+	z-index: 4;
+	font-size: 0;
+	background: url('../../img/Prev.svg') 0 0/100% no-repeat;
+	height: 45px;
+	width: 45px;
+	background-color: #000;
+}
+.slick-next{
+	right: 0;
+	top: 8%;
+	transform: rotate(-180deg);
+}
+.slick-prev{
+}
+// /Второй блок============================================================================================//
+	<div class="slider">
+		<div class="slider__item">
+			<img src="img/bg1.jpg" alt="bg1" class="slider__img">
+			<div class="slider__text">
+				<div class="slider__title">lian creative agency</div>
+				<div class="slider__subtitle">minimal freelance portfolio</div>
+			</div>
+		</div>
+		<div class="slider__item">
+			<img src="img/bg2.jpg" alt="bg2" class="slider__img">
+			<div class="slider__text">
+				<div class="slider__title">design&branding</div>
+				<div class="slider__subtitle">we deliver quality results</div>
+			</div>
+		</div>
+	</div>

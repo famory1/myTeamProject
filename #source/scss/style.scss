@@ -103,6 +103,9 @@ body{
 		body.lock{
 			overflow: hidden;
 		}
+		&__body{
+			height: 60px;
+		}
 		&__burger{
 			display: block !important;
 			z-index: 10;
@@ -145,7 +148,7 @@ body{
 		&__link{
 			font-size: 16px;
 			&:hover{
-				color: white;	
+				color: #C9C9C9FF;
 			}	
 		}
 		&__item{
@@ -153,6 +156,12 @@ body{
 		}
 		&__logo{
 			z-index: 10;
+			transition-duration: 0.7s;
+		}
+		&__logo.active{
+			background: #C9C9C9FF;
+			transition-duration: 0.7s;
+			padding: 5px;
 		}
 		&__search {
 			margin-top: 30px;
@@ -165,6 +174,18 @@ body{
 			align-self: flex-end;
 		}
 	}
+	@media(max-width: 469px){
+		&__logo{
+			transform: scale(0.7);
+			
+		}
+		&__body{
+			height: 40px;
+		}
+		&__nav{
+			padding: 45px 0 0 30px;
+		}
+	}
 }
 // /Хэдэр===================================================================================================//
 // Второй блок============================================================================================= //
@@ -172,7 +193,6 @@ body{
 	&__body {
 		margin: 0 auto;
 		max-width: 1600px;
-		min-height: 100%;
 		position: relative;
 	}
 	&__item {
@@ -205,6 +225,41 @@ body{
 		font-size: 18px;
 		padding-top: 50px;
 	}
+	@media(max-width: 976px){
+		&__title{
+			font-size: 32px;
+			width: 600px;
+			padding-top: 8px;
+		}
+		&__subtitle{
+			padding-top: 25px;
+		}
+	}
+	@media(max-width: 608px){
+		&__title{
+			font-size: 25px;
+			width: 500px;
+			padding-top: 14px;
+		}
+		&__subtitle{
+			font-size: 14px;
+			padding-top: 15px;
+		}
+
+	}
+	@media(max-width: 469px){
+		&__title{
+			font-size: 14px;
+			width: 330px;
+			height: 43px;
+		}
+		&__subtitle{
+			display: flex;
+			text-align: center;
+			font-size: 12px;
+			padding-top: 15px;
+		}
+	}
 }
 // Панель управления слайдером
 .slick-slide{
@@ -233,26 +288,43 @@ body{
 .slider .slick-arrow.slick-next{
 	right: 0;
 	margin-right: 110px;
-	background: url('../../img/arrow.svg') 0 0/ 100% no-repeat;
+	background: url('https://image.flaticon.com/icons/png/512/60/60775.png') 0 0/ 100% no-repeat;
 	transform: scale(-1, 1); 
 	border-radius: 50%;
 	transition-duration: 0.5s;
+	opacity: 0.7;
 	&:hover{
-		background-color: #fff;
 		transform: scale(-1.3, 1.3);
 	}
 }
 .slider .slick-arrow.slick-prev{
-	background: url('../../img/arrow.svg') 0 0/ 100% no-repeat;
+	background: url('https://image.flaticon.com/icons/png/512/60/60775.png') 0 0/ 100% no-repeat;
 	margin-left: 110px;
 	background-size: 100%;
 	border-radius: 50%;
 	transition-duration: 0.5s;
+	opacity: 0.7;
 	fill: #fff;
 	&:hover{
 		transform: scale(1.3);
-		background-color: #fff;
 	}
+}
+@media(max-width: 976px){
+	
+	.slider .slick-arrow.slick-next{
+		margin-right: 35px;
+		margin-top: 50px;
+	}
+	.slider .slick-arrow.slick-prev{
+		margin-left: 35px;
+		margin-top: 50px;
+	}
+}
+@media(max-width: 469px){
+	.slick-arrow{
+		height: 35px;
+		width: 35px;
+}
 }
 // /Стрелочки
 //Точки
@@ -284,6 +356,7 @@ body{
 	transition-duration: 0.3s;
 	border: 4px solid #000;
 }
+
 
 // /Точки
 

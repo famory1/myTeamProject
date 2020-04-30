@@ -20,19 +20,19 @@
 				<!-- <span class="header__burger"></span> -->
 				<ul class="header__nav">
 					<li class="header__item">
-						<a href="#" class="header__link">HOME</a>
+						<a href="#" class="header__link link home">HOME</a>
 					</li>
 					<li class="header__item">
-						<a href="#" class="header__link">ABOUT</a>
+						<a href="#" class="header__link link about">ABOUT</a>
 					</li>
 					<li class="header__item">
-						<a href="#" class="header__link">PORTFOLIO</a>
+						<a href="#" class="header__link link portfolio">PORTFOLIO</a>
 					</li>
 					<li class="header__item">
-						<a href="#" class="header__link">BLOG</a>
+						<a href="#" class="header__link link blog">BLOG</a>
 					</li>
 					<li class="header__item">
-						<a href="#" class="header__link">CONTACT</a>
+						<a href="#" class="header__link link contact">CONTACT</a>
 					</li>
 					<div class="header__item header__search">
 						<input class="header__text" type="text" placeholder="Type to search"> 
@@ -63,7 +63,55 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- Третий блок. Блок с фотографиями и фильтрами -->
+	<div class="photo">
+		<div class="photo__body">
+			<ul class="photo__nav">
+				<li class="photo__item">
+					<a href="#" class="photo__link link" data-filter="all">all</a>
+				</li>
+				<li class="photo__item">
+					<a href="#" class="photo__link link" data-filter="logo">logo</a>
+				</li>
+				<li class="photo__item">
+					<a href="#" class="photo__link link"data-filter="mobile-app">mobile app</a>
+				</li>
+				<li class="photo__item">
+					<a href="#" class="photo__link link"data-filter="wordpress">wordpress</a>
+				</li>
+				<li class="photo__item">
+					<a href="#" class="photo__link link"data-filter="web-design">web design</a>
+				</li>
+				<li class="photo__item">
+					<a href="#" class="photo__link link"data-filter="ui">ui/ix</a>
+				</li>
+				<li class="photo__item">
+					<a href="#" class="photo__link link"data-filter="branding">branding</a>
+				</li>
+			</ul>
+			<div class="photo__list" >
+				<div class="photo__part1 photo__column" id="portfolio">
+					<img src="img/photo-list/1.jpg" alt="" data-cat="logo"class="photo__img photo__img1" >
+					<img src="img/photo-list/2.jpg" alt="" data-cat="ui"class="photo__img photo__img1" >
+					<img src="img/photo-list/3.jpg" alt="" data-cat="mobile-app"class="photo__img photo__img1" >
+				</div>
+				<div class="photo__part2 photo__column">            
+					<img src="img/photo-list/4.jpg" alt=""data-cat="branding" class="photo__img photo__img2">
+					<img src="img/photo-list/5.jpg" alt=""data-cat="branding" class="photo__img photo__img2">
+					<img src="img/photo-list/6.jpg" alt=""data-cat="logo" class="photo__img photo__img2">
+					<img src="img/photo-list/7.jpg" alt=""data-cat="web-design" class="photo__img photo__img2">
+				</div>
+				<div class="photo__part3 photo__column">				
+					<img src="img/photo-list/8.jpg" alt=""data-cat="ui" class="photo__img photo__img3">
+					<img src="img/photo-list/9.jpg" alt="" data-cat="mobile-app"class="photo__img photo__img3">
+					<img src="img/photo-list/10.jpg" alt="" data-cat="wordpress"class="photo__img photo__img3">
+				</div>
+			</div>
+			<div class="photo__load">
+				<a href="#" class="photo__btn">load more</a>
+			</div>
+		</div>
+	</div>
 
 
 

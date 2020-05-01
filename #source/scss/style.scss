@@ -369,7 +369,7 @@ body{
 			content: "";
 			background-color: #e1e1e1;
 			height: 1px;
-			max-width: 1140px; 
+			width: 1140px; 
 			position: absolute;
 			bottom: 0;
 		}
@@ -377,16 +377,13 @@ body{
 			content: "";
 			background-color: #e1e1e1;
 			height: 1px;
-			max-width: 1140px; 
+			width: 1140px; 
 			position: absolute;
 			top: 0;
 		}
 	}
 	&__item {
 		margin-right: 50px;
-		&:last-child{
-			margin-right: 0px;
-		}
 		&:after{
 			content: "";
 			background-color: #e1e1e1;
@@ -398,23 +395,26 @@ body{
 			margin-top: 15px;
 			margin-left: 25px;
 		}
+		&:last-child{
+			margin-right: 0px;
+		}
+		&:last-child::after{
+			display: none;
+		}
 	}
 	&__link {
 		position: relative;
 	}
 	&__list {
-		margin:0px 0px auto; 
+		margin: 0 auto; 
 		display: flex;
 		flex-wrap: wrap;
 		max-width: 1140px;
-		padding: 30px 15px 0px 15px;
-	}
-	&__part1 {
-		margin-right: 15px;
+		padding-top: 30px;
 	}
 	&__part2 {
-		margin-right: 15px;
-			}
+		padding: 0 30px;
+	}
 	&__column {
 		margin: 0 auto;
 		display: flex;
@@ -423,17 +423,13 @@ body{
 		justify-content: flex-start;
 	}
 	&__img {
-		max-width: 100%;
+		max-width: 360px;
 		margin-bottom: 35px;
 		position: relative;
 	}
 	&__img.hide{
 		display: none;
-	}
-	&__img1{
-	}
-	&__img2{}
-	&__img3{}	
+	}	
 	&__load{
 		display: flex;
 		justify-content: center;
@@ -449,6 +445,54 @@ body{
 		padding: 10px 25px;
 		font-weight: 550;
 		letter-spacing: 1px;
+	}
+	@media (max-width: 1140px) {
+		&__nav{
+			&:before, &:after{
+				width: 970px;
+			}
+		}
+	}
+	@media(max-width: 977px){
+		&__menu{
+			font-size: 35px;
+			display: flex !important;
+			justify-content: center;
+		    color: #959595;
+		    padding-top: 15px;
+			transition-duration: 0.3s;
+		}
+		&__menu.active{
+			font-size: 40px;
+			transition-duration: 0.3s; 
+			color:#4C4C4CFF;
+		}
+		&__nav{
+			display: none;
+			height: 150px;
+			&:before, &:after{
+				display: none;
+			}
+		}
+		&__item{
+			margin-bottom: 6px;
+			margin-right: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			&:after{
+				display: none;
+			}
+		}
+		&__link{
+			font-size: 16px;
+			&:hover{
+				transform: scale(1.2);
+			}
+		}
+		&__part2 {
+			padding: 0;
+		}
 	}
 	
 }

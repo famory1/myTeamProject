@@ -355,21 +355,19 @@ body {
     content: "";
     background-color: #e1e1e1;
     height: 1px;
-    max-width: 1140px;
+    width: 1140px;
     position: absolute;
     bottom: 0; }
   .photo__nav:before {
     content: "";
     background-color: #e1e1e1;
     height: 1px;
-    max-width: 1140px;
+    width: 1140px;
     position: absolute;
     top: 0; }
 
 .photo__item {
   margin-right: 50px; }
-  .photo__item:last-child {
-    margin-right: 0px; }
   .photo__item:after {
     content: "";
     background-color: #e1e1e1;
@@ -380,22 +378,23 @@ body {
     top: 0;
     margin-top: 15px;
     margin-left: 25px; }
+  .photo__item:last-child {
+    margin-right: 0px; }
+  .photo__item:last-child::after {
+    display: none; }
 
 .photo__link {
   position: relative; }
 
 .photo__list {
-  margin: 0px 0px auto;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   max-width: 1140px;
-  padding: 30px 15px 0px 15px; }
-
-.photo__part1 {
-  margin-right: 15px; }
+  padding-top: 30px; }
 
 .photo__part2 {
-  margin-right: 15px; }
+  padding: 0 30px; }
 
 .photo__column {
   margin: 0 auto;
@@ -405,7 +404,7 @@ body {
   justify-content: flex-start; }
 
 .photo__img {
-  max-width: 100%;
+  max-width: 360px;
   margin-bottom: 35px;
   position: relative; }
 
@@ -427,3 +426,39 @@ body {
   padding: 10px 25px;
   font-weight: 550;
   letter-spacing: 1px; }
+
+@media (max-width: 1140px) {
+  .photo__nav:before, .photo__nav:after {
+    width: 970px; } }
+
+@media (max-width: 977px) {
+  .photo__menu {
+    font-size: 35px;
+    display: flex !important;
+    justify-content: center;
+    color: #959595;
+    padding-top: 15px;
+    transition-duration: 0.3s; }
+  .photo__menu.active {
+    font-size: 40px;
+    transition-duration: 0.3s;
+    color: #4C4C4CFF; }
+  .photo__nav {
+    display: none;
+    height: 150px; }
+    .photo__nav:before, .photo__nav:after {
+      display: none; }
+  .photo__item {
+    margin-bottom: 6px;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .photo__item:after {
+      display: none; }
+  .photo__link {
+    font-size: 16px; }
+    .photo__link:hover {
+      transform: scale(1.2); }
+  .photo__part2 {
+    padding: 0; } }

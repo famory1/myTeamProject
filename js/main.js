@@ -13,6 +13,12 @@ $(document).ready(function(){
   		speed: 1000,
 	});
 });
+// Кнопка меню для навигации в телефоне
+$(document).ready(function(){
+	$('.photo__menu').click(function(event){
+		$('.photo__menu, .photo__nav, .photo__list').toggleClass('active');
+	});
+});
 // Фильтр
 $(function(){
 

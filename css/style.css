@@ -403,7 +403,28 @@ body {
   flex-direction: column;
   justify-content: flex-start; }
 
+.photo__gallery {
+  position: relative; }
+  .photo__gallery:hover > .photo__title {
+    display: flex;
+    height: 100%;
+    width: 100%; }
+  .photo__gallery:hover > .photo__img {
+    filter: brightness(0.5); }
+
+.photo__title {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase; }
+
 .photo__img {
+  transition-duration: 0.5s;
   max-width: 360px;
   margin-bottom: 35px;
   position: relative; }
